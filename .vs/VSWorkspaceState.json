@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\demos",
+    "\\demos\\SE2RigidBodyPlanning",
+    "\\gui",
+    "\\ompl",
+    "\\ompl\\py-bindings",
+    "\\ompl\\py-bindings\\ompl",
+    "\\ompl\\tests"
+  ],
+  "SelectedNode": "\\demos\\SE2RigidBodyPlanning",
+  "PreviewInSolutionExplorer": false
+}

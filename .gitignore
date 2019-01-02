@@ -1,31 +1,57 @@
-.registered
-.DS_Store
-*.swp
-build/
-bin/
-lib/
-*.pcd
-*.pyc
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# C extensions
 *.so
-*.dylib
-CMakeModules/ompl.pc
-doc/markdown/api_overview.md
-doc/markdown/CForest.md
-doc/markdown/download.md
-doc/markdown/mainpage.md
-doc/header.html
-doc/html
-py-bindings/ompl/bindings_generator.py
-py-bindings/bindings
-py-bindings/ompl/app
-py-bindings/ompl/rrtstar
-src/external/installPyPlusPlus.bat
-src/external/installPyPlusPlus.sh
-src/ompl/config.h
-tests/BoostTestTeamCityReporter.h
-tests/resources/config.h
-_symlinks.sh
-package.xml
-.dir-locals.el
-*~
-install-ompl-ubuntu.sh
+
+# Distribution / packaging
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*,cover
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/

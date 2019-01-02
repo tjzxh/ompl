@@ -4,7 +4,7 @@
 version: "{build}"
 os: Visual Studio 2017
 
-clone_folder: C:\projects\ompl
+clone_folder: C:\projects\omplapp
 shallow_clone: true
 
 platform: x64
@@ -21,6 +21,7 @@ cache:
 configuration: Release
 
 before_build:
+  - cmd: vcpkg install assimp:%VCPKG_ARCH%
   - cmd: vcpkg install boost-disjoint-sets:%VCPKG_ARCH%
   - cmd: vcpkg install boost-dynamic-bitset:%VCPKG_ARCH%
   - cmd: vcpkg install boost-filesystem:%VCPKG_ARCH%
@@ -32,12 +33,14 @@ before_build:
   - cmd: vcpkg install boost-test:%VCPKG_ARCH%
   - cmd: vcpkg install boost-ublas:%VCPKG_ARCH%
   - cmd: vcpkg install eigen3:%VCPKG_ARCH%
+  - cmd: vcpkg install fcl:%VCPKG_ARCH%
+  - cmd: git clone -q --depth=1 --branch=master https://github.com/ompl/ompl.git C:\projects\omplapp\ompl
   - cmd: mkdir build
   - cmd: cd build
   - cmd: cmake %CMAKE_GENERATOR% -DCMAKE_BUILD_TYPE=%configuration% %CMAKE_TOOLCHAIN_FILE% -DOMPL_REGISTRATION=OFF ..
 
 build:
-  project: C:\projects\ompl\build\ompl.sln
+  project: C:\projects\omplapp\build\omplapp.sln
   parallel: true
 
 after_build:
@@ -47,4 +50,4 @@ test_script:
   - cmd: ctest -C %configuration%
 
 artifacts:
-  - path: 'build\ompl*.zip'
+  - path: 'build\omplapp*.zip'
